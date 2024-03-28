@@ -1,7 +1,7 @@
 
 
 
-Introduce la empresa: <input type="text" #empresa (keyup)="0" /> 
+Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitarInput"/> 
  
  
 
@@ -13,3 +13,15 @@ Introduce la empresa: <input type="text" #empresa (keyup)="0" />
 <p>Apellido del empleado: {{getApellido()}}</p>
 <p>Edad del empleado: {{(getEdad()>18 ? 'Es mayor de edad' : 'Es menor de Edad') + ' Tiene ' + getEdad() + ' años' }}</p>
 <p>Empresa del empleado: {{empresa.value}}</p>
+
+<br>
+<br>
+{{ textoDeRegistro}}
+<br>
+Registrado: <input type="checkbox" id="registro" [checked]="usuarioRegistro" (click)="setUsuarioRegistrado()">
+
+
+
+
+
+

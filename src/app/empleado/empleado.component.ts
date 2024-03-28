@@ -31,6 +31,18 @@ export class EmpleadoComponent implements OnInit {
     return this.empresa;
   } */
   
+  habilitarInput = false;
+  usuarioRegistro = false;
+  textoDeRegistro = 'No hay nadie registrado';
+
+  getRegistroUsuario(){
+    this.usuarioRegistro = false;
+  }
+
+  setUsuarioRegistrado(){
+    this.textoDeRegistro = 'El usuario se acaba de registrar';
+  }
+  
 
   constructor(){}
 
